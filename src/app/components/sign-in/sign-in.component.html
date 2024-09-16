@@ -1,0 +1,25 @@
+<div class="container">
+    <form class="w-50 mx-auto" (submit)="Login()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">User name</label>
+          <input type="email" name="username" [(ngModel)] = "username" #uname="ngModel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="passoword" [(ngModel)] = "password" #upass="ngModel" class="form-control" id="exampleInputPassword1">
+        </div>
+        @if(uname.touched && upass.touched){
+            @if(username != user || password != pass){
+                <div class="text-danger my-3">
+                    <span>
+                        name or password is not valid
+                    </span>
+                </div>
+            }
+        }
+        <div class="text-center">
+            <button type="submit" [disabled]="username != user || password != pass" class="btn btn-primary w-50">Submit</button>
+        </div>
+      </form>
+</div>
