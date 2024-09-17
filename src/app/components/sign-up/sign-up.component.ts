@@ -11,22 +11,33 @@ import { RouterLink } from '@angular/router';
   styles: ``
 })
 export class SignUpComponent {
-  password1: string = "";
-  password2: string = "";
-
-
   registerData = new FormGroup(
     {
       username: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
-      email: new FormControl('', [Validators.required, Validators.pattern('/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/')]),
-      password1: new FormControl('', [Validators.required, Validators.pattern("/^[A-Za-z]\w{7,14}$/")]),
-      phone: new FormControl('')
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
+      phone: new FormControl('', [Validators.required])
     }
   )
 
 
+
+  get name() {
+    return this.registerData.get('username')?.errors
+  }
+  get email() {
+    return this.registerData.get('email')?.errors
+  }
+  get password() {
+    return this.registerData.get('password')?.errors
+  }
+  get phone() {
+    return this.registerData.get('phone')?.errors
+  }
+
   signup() {
     console.log(this.registerData.value);
+    alert("register successfully")
 
   }
 }

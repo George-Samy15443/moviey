@@ -1,31 +1,54 @@
 <div class="container">
-    {{registerData.errors}}
+    {{registerData.value| json}}
 
     <form class="w-50 mx-auto" (submit)="signup()" [formGroup]="registerData">
         <div class="mb-3">
             <label for="username" class="form-label">User name</label>
             <input type="email" name="username" formControlName="username" id="username" class="form-control">
         </div>
-        <!-- @if(!registerData.errors?.['username']?.valid){
+
+        @if(registerData.controls['username'].touched){
         <div class="text-danger my-3">
-            <span>user name invalid</span>
+            @if(name?.['required']){
+            <span>user name required</span>
+            }
+            @if(name?.['minlength'] || name?.['maxlength']){
+            <span>user name min Length 3 and max length 10</span>
+            }
         </div>
-        } -->
+        }
 
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" name="Email" formControlName="email" id="email" class="form-control">
         </div>
 
+        @if(registerData.controls['email'].touched){
+        <div class="text-danger my-3">
+            @if(email?.['required']){
+            <span>email required</span>
+            }
+
+        </div>
+        }
+
         <div class="mb-3">
             <label for="password1" class="form-label">Password</label>
-            <input type="text" name="password1" #pass1 formControlName="password1" id="password1" class="form-control">
+            <input type="text" name="password" #pass1 formControlName="password" id="password1" class="form-control">
         </div>
+
+        @if(registerData.controls['password'].touched){
+        <div class="text-danger my-3">
+            @if(password?.['required']){
+            <span>password required</span>
+            }
+        </div>
+        }
 
 
         <div class="mb-3">
             <label for="password2" class="form-label">Confirm Password</label>
-            <input type="text" name="password2" #pass2 formControlName="password1" id="passoword2" class="form-control">
+            <input type="text" #pass2 formControlName="password" id="passoword2" class="form-control">
         </div>
 
         @if(pass1.value != pass2.value){
@@ -38,9 +61,16 @@
             <label for="phone" class="form-label">Phone</label>
             <input type="number" name="phone" formControlName="phone" id="phone" class="form-control">
         </div>
+        @if(registerData.controls['phone'].touched){
+        <div class="text-danger my-3">
+            @if(phone?.['required']){
+            <span>phone required</span>
+            }
+        </div>
+        }
 
         <div class="text-center">
-            <button type="submit" [disabled]="!registerData.valid" class="btn btn-primary w-50">Register</button>
+            <button type="submit" [disabled]="registerData.invalid" class="btn btn-primary w-50">Register</button>
         </div>
         <div class="my-3">
             <span class=" me-3">Already Have Account</span>
