@@ -9,6 +9,8 @@
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" name="passoword" [(ngModel)] = "password" #upass="ngModel" class="form-control" id="exampleInputPassword1">
         </div>
+
+        {{upass.value}}
         @if(uname.touched && upass.touched){
             @if(username != user || password != pass){
                 <div class="text-danger my-3">

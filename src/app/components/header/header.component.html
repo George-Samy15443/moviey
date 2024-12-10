@@ -13,12 +13,15 @@
             <a class="nav-link active" aria-current="page" routerLink="/series">Series</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/myList">My List</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/contactUs">Contact us</a>
           </li>
         </ul>
         <form class="d-flex me-4" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2" type="search" name="movie" [(ngModel)]="movieName" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" (click)="search()">Search</button>
         </form>
         <ul class="navbar-nav  mb-2 mb-lg-0">
             <li class="nav-item">

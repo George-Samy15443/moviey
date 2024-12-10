@@ -1,0 +1,167 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "name": "The Showshank Redemption",
+      "genre": "Drama",
+      "director": "Frank Darabont",
+      "cast": [
+        "Tim Robbins",
+        "Morgan Freeman",
+        "Bob Gunton"
+      ],
+      "imgUrl": "/imgs/movies/The Shawshank Redemption.jpg",
+      "rating": 9.3
+    },
+    {
+      "id": "2",
+      "name": "The Godfather (1972)",
+      "genre": "Gangster",
+      "director": "Francis Ford Coppola",
+      "cast": [
+        "Marlon Brando",
+        "Al Pacino",
+        "James Caan"
+      ],
+      "imgUrl": "/imgs/movies/The Godfather (1972).jpg",
+      "rating": 9.2
+    },
+    {
+      "id": "3",
+      "name": "The Dark Knight",
+      "genre": "Superhero",
+      "director": "Christopher Nolan",
+      "cast": [
+        "Christian Bale",
+        "Heath Ledger",
+        "Aaron Eckhart"
+      ],
+      "imgUrl": "/imgs/movies/The Dark knight.jpg",
+      "rating": 9
+    },
+    {
+      "id": "4",
+      "name": "The Godfther Part II",
+      "genre": "Gangster",
+      "director": "Francis Ford Coppola",
+      "cast": [
+        "Al Pacino",
+        "Robert De Niro",
+        "Robert Duvall"
+      ],
+      "imgUrl": "/imgs/movies/The Godfather Part II.jpg",
+      "rating": 9
+    },
+    {
+      "id": "5",
+      "name": "12 Angry Men",
+      "genre": "Crime",
+      "director": "Sidney Lumet",
+      "cast": [
+        "Henry Fonda",
+        "Lee J. Cobb",
+        "Martin Balsam"
+      ],
+      "imgUrl": "/imgs/movies/12 Angry Men.jpg",
+      "rating": 9
+    },
+    {
+      "id": "11",
+      "name": "The Godfather (1972)",
+      "genre": "Gangster",
+      "director": "Francis Ford Coppola",
+      "cast": [
+        "Marlon Brando",
+        "Al Pacino",
+        "James Caan"
+      ],
+      "imgUrl": "/imgs/movies/The Godfather (1972).jpg",
+      "rating": 9.2
+    }
+  ],
+  "series": [
+    {
+      "id": "6",
+      "name": "Breaking Bad",
+      "genre": "Crime",
+      "director": "Vince Gilligan",
+      "cast": [
+        "Bryan Cranston",
+        "Aaron Paul",
+        "Anna Gunn"
+      ],
+      "imgUrl": "/imgs/movies/series/Breaking Bad.jpg",
+      "rating": 9.5
+    },
+    {
+      "id": "7",
+      "name": "Planet Earth II",
+      "genre": "Documentary",
+      "director": "David Attengborough",
+      "cast": [
+        "David Attengborough",
+        "Gordon Buchanan",
+        "Chadden Hunter"
+      ],
+      "imgUrl": "/imgs/movies/series/Planet Earth II.jpg",
+      "rating": 9.5
+    },
+    {
+      "id": "8",
+      "name": "Planet Earth",
+      "genre": "Documentary",
+      "director": "David Attengborough",
+      "cast": [
+        "David Attengborough",
+        "Sigourney Weaver",
+        "Nikolay Drozdov"
+      ],
+      "imgUrl": "/imgs/movies/series/Planet Earth.jpg",
+      "rating": 9.4
+    },
+    {
+      "id": "9",
+      "name": "Band of Brothers",
+      "genre": "War",
+      "director": "Phil Alden Robinson",
+      "cast": [
+        "Scott Grimes",
+        "Damian Lewis",
+        "Ron Livingston"
+      ],
+      "imgUrl": "/imgs/movies/series/Band of Brothers.jpg",
+      "rating": 9.4
+    },
+    {
+      "id": "10",
+      "name": "Chernobyl",
+      "genre": "History",
+      "director": "Craig Mazin",
+      "cast": [
+        "Jessie Buckley",
+        "Jared Harris",
+        "Stellan Skarsgard"
+      ],
+      "imgUrl": "/imgs/movies/series/Chernobyl.jpg",
+      "rating": 9.3
+    }
+  ],
+  "myList": [],
+  "userComments": [
+    {
+      "id": "1",
+      "movieId": "1",
+      "comment": "this is one of the most highly rated movies of the year on our humble platform"
+    },
+    {
+      "id": "2",
+      "movieId": "2",
+      "comment": "A legendary movie from a legendary director"
+    },
+    {
+      "id": "3",
+      "movieId": "2",
+      "comment": "ghas;fdkjaga"
+    }
+  ]
+}

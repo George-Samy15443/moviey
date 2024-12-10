@@ -1,0 +1,25 @@
+<div class="my-5">
+    <button class="btn btn-dark" (click)="back()">Back</button>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="movie.imgUrl" class="card-img-top" alt="...">
+    </div>
+
+    <div class="col-md-8">
+    <h5 class="card-title">{{movie.name}}</h5>
+      <h5 class="card-title">{{movie.director}}</h5>
+      @for (cast of movie.cast; track $index) {
+        @if ($index == movie.cast.length-1) {
+          <h6 class="card-title d-inline">{{cast}}</h6>
+        }@else {
+          <h6 class="card-title d-inline">{{cast}} - </h6>
+        }
+      }
+      <p class="card-text">{{movie.rating}}</p><br><br>
+
+      <textarea class="textarea w-75 h-25" name="comment" #inputComment id="" placeholder="Type your comment"></textarea>
+      <button class="btn btn-primary" (click)="comment(inputComment.value, movie.id)">Comment</button>
+    </div>
+</div>

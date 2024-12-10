@@ -1,1 +1,45 @@
-<p>sign-up works!</p>
+<h1 class="text-center mb-5">Sign Up</h1>
+
+<form class="mb-3 w-50 mx-auto shadow p-5" [formGroup]="signUpForm">
+    <label class="form-label" for="userName">Username</label>
+    <input id="userName" class="form-control" type="text" formControlName = "userName"><br><br>
+
+    @if (signUpForm.controls['userName'].invalid && (signUpForm.controls['userName'].dirty || signUpForm.controls['userName'].touched)) {
+        <div class="alert alert-danger">
+            <div >
+                Name is required.
+              </div>
+              <div >
+                Name must be at least 3 characters long and 10 characters maximum.
+              </div>
+        </div>
+    }
+
+    <label class="form-label" for="password">Password</label>
+    <input id="password" class="form-control" type="password" formControlName = "password" #inputPassword><br><br>
+    @if (signUpForm.controls['password'].invalid && signUpForm.controls['password'].touched) {
+        <div class="alert alert-danger">
+            <div >
+                password is required.
+            </div>
+        </div>
+    }
+
+    <label class="form-label" for="Cpassword">Confirm password</label>
+    <input id="Cpassword" class="form-control" type="password" #inputConfirmPassword formControlName="password"><br><br>
+
+    @if (inputPassword.value != inputConfirmPassword.value && signUpForm.controls['password'].touched) {
+        <div class="alert alert-danger">password must match confirm password</div>
+    }
+    
+
+    <label class="form-label" for="email">Email</label>
+    <input id="email" class="form-control" type="email" formControlName = "email"><br><br>
+
+    <label class="form-label" for="phone">Phone</label>
+    <input id="phone" class="form-control" type="tel" formControlName = "phone"><br><br>
+    
+    <button class="btn btn-primary" (click)="onSubmit()">Sign Up</button>
+</form>
+
+
